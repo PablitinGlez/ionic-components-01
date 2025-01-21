@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+        <div class="header"><ion-icon name="arrow-back-outline" routerLink="/inicio"></ion-icon>
+    <ion-title>Bagdes</ion-title></div> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Tarjetas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- Primera tarjeta con fondo azul -->
+  <ion-card class="card-estilo card-blue">
+    <ion-card-header>
+      <ion-card-title>Bienvenido a nuestro servicio</ion-card-title>
+      <ion-card-subtitle>Tarjeta informativa</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Esta tarjeta contiene una breve descripción sobre nuestros servicios. Ofrecemos productos de alta calidad para mejorar tu experiencia.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Segunda tarjeta con imagen y fondo verde -->
+  <ion-card class="card-estilo card-green">
+    <img alt="Imagen de paisaje" src="assets/capi.jpg" />
+    <ion-card-header>
+      <ion-card-title>Descubre nuestras ofertas</ion-card-title>
+      <ion-card-subtitle>Tarjeta promocional</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Conoce las ofertas especiales que tenemos para ti. No dejes pasar las promociones exclusivas que están disponibles por tiempo limitado.
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Tercera tarjeta con fondo amarillo -->
+  <ion-card class="card-estilo card-yellow">
+    <ion-card-header>
+      <ion-card-title>Tarjeta especial</ion-card-title>
+      <ion-card-subtitle>Evento exclusivo</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Te invitamos a un evento exclusivo con grandes sorpresas. ¡No faltes!
+    </ion-card-content>
+  </ion-card>
+</ion-content>

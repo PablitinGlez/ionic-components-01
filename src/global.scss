@@ -1,0 +1,18 @@
+@import "~@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/ionic.bundle.css";
+
+.header {
+    display: flex;
+    justify-content: center;
+    gap: 4;
+}
+
+ion-icon {
+    width: 30px;
+    height: 20px;
+    padding-top: 3px;
+    padding-left: 5px;
+}

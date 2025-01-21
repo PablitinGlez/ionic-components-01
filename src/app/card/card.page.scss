@@ -1,0 +1,53 @@
+.card-estilo {
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-estilo img {
+    border-radius: 15px 15px 0 0;
+    /* Redondeo en la parte superior */
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Fondo y estilo de cada tarjeta */
+.card-blue {
+    background-color: #a5cefc;
+    /* Fondo azul */
+}
+
+.card-green {
+    background-color: #b8fbd4;
+    /* Fondo verde */
+}
+
+.card-yellow {
+    background-color: #fff1b8;
+    /* Fondo amarillo */
+}
+
+/* Estilo del encabezado de las tarjetas */
+ion-card-header {
+    color: white;
+    border-radius: 15px 15px 0 0;
+    /* Redondeo en la parte superior */
+}
+
+ion-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+ion-card-subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+ion-card-content {
+    font-size: 1rem;
+    color: #333;
+    padding: 15px;
+    text-align: justify;
+    /* Mejor legibilidad del texto */
+}

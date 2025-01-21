@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <div class="header"><ion-icon name="arrow-back-outline" routerLink="/inicio"></ion-icon>
+    <ion-title>Acordeon</ion-title></div> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="contenido">
+    <div class="cont">
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Primero</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Primer Acordeón</div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Segundo</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Segundo Acordeón</div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Tercero</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Tercer Acordeón</div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </div>
+
+    <div class="cont">
+      <ion-accordion-group #accordionGroup>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Primero</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Primer Acordeón</div>
+        </ion-accordion>
+        <ion-accordion value="second">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Segundo</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Segundo Acordeón</div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Tercero</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Tercer Acordeón</div>
+        </ion-accordion>
+      </ion-accordion-group>
+
+      <ion-button (click)="toggleAccordion()">Alternar Segundo Acordeón</ion-button>
+    </div>
+
+    <div class="cont">
+      <ion-accordion-group>
+        <ion-accordion value="first">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Primero</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Primer Acordeón</div>
+        </ion-accordion>
+        <ion-accordion value="second" [disabled]="true">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Segundo (Deshabilitado)</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Segundo Acordeón</div>
+        </ion-accordion>
+        <ion-accordion value="third">
+          <ion-item slot="header" color="light">
+            <ion-label>Acordeón Tercero</ion-label>
+          </ion-item>
+          <div class="ion-padding" slot="content">Contenido del Tercer Acordeón</div>
+        </ion-accordion>
+      </ion-accordion-group>
+    </div>
+  </div>
+</ion-content>

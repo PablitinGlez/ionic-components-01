@@ -1,0 +1,31 @@
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.cont {
+    margin: 5px;
+    width: 100%;
+    /* Asegura que los contenedores ocupen todo el ancho */
+}
+
+@media (min-width: 600px) {
+    .cont {
+        width: 48%;
+        /* 2 columnas en pantallas medianas */
+    }
+}
+
+@media (min-width: 992px) {
+    .cont {
+        width: 30%;
+        /* 3 columnas en pantallas grandes */
+    }
+}
+
+ion-button {
+    margin-top: 10px;
+    width: 100%;
+}

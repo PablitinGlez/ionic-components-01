@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="header">
+      <ion-icon name="arrow-back-outline" routerLink="/inicio"></ion-icon>
+      <ion-title>Avatar</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-chip class="avatar-chip">
+    <ion-avatar>
+      <img alt="Silhouette of a person's head" src="/assets/capi.jpg" />
+    </ion-avatar>
+    <ion-label>Chip Avatar</ion-label>
+  </ion-chip>
+
+  <ion-avatar class="avatar-large">
+    <img alt="Silhouette of a person's head" src="/assets/capi.jpg" />
+  </ion-avatar>
+
+  <ion-item class="avatar-item">
+    <ion-avatar slot="start">
+      <img alt="Silhouette of a person's head" src="/assets/capi.jpg" />
+    </ion-avatar>
+    <ion-label>Item Avatar</ion-label>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="header"><ion-icon name="arrow-back-outline" routerLink="/inicio"></ion-icon>
+    <ion-title>Alertas</ion-title></div> 
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Alertas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="alertas">
+<ion-button (click)="presentSimpleAlert()">Mostrar Alerta Simple</ion-button>
+
+  <!-- Botón para mostrar la alerta con botones personalizados -->
+  <ion-button (click)="presentColorAlert()">Seleccionar Color</ion-button>
+
+  <!-- Botón para mostrar la alerta con entradas personalizadas -->
+  <ion-button (click)="presentSimpleButtonAlert()">Mostrar Alerta Simple</ion-button>
+  </div>
+  <!-- Botón para mostrar la alerta simple -->
+  
+</ion-content>
