@@ -11,15 +11,31 @@
     </ion-toolbar>
   </ion-header>
 
-  <form #juanito="ngForm" (ngSubmit)="login(juanito)"> 
+  <form #juanito="ngForm" (ngSubmit)="login(juanito)">
     <ion-item>
-    <ion-input name="email" [(ngModel)]="email" label="Correo electronico" labelPlacement="floating" placeholder="Enter text" required></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-input name="password" [(ngModel)]="password" label="Contraseña" labelPlacement="stacked" placeholder="Enter text" required></ion-input>
-  </ion-item>
-  <ion-button type="submit">
-    Iniciar sesion
-  </ion-button></form>
- 
+      <ion-input
+        name="email"
+        [(ngModel)]="email"
+        label="Correo electronico"
+        labelPlacement="floating"
+        placeholder="Enter text"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        name="password"
+        [(ngModel)]="password"
+        label="Contraseña"
+        labelPlacement="stacked"
+        placeholder="Enter text"
+        required
+      ></ion-input>
+    </ion-item>
+    <ion-button type="submit"> Iniciar sesion </ion-button>
+  </form>
+
+  <p>¿No tienes cuenta?
+    <a routerLink="/register" style="color: blue "> Registrate</a>
+  </p>
 </ion-content>
