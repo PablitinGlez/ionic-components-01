@@ -17,8 +17,7 @@
         name="email"
         [(ngModel)]="email"
         label="Correo electronico"
-        labelPlacement="floating"
-        placeholder="Enter text"
+          labelPlacement="stacked"
         required
       ></ion-input>
     </ion-item>
@@ -28,7 +27,7 @@
         [(ngModel)]="password"
         label="Contraseña"
         labelPlacement="stacked"
-        placeholder="Enter text"
+       
         required
       ></ion-input>
     </ion-item>
@@ -36,6 +35,6 @@
   </form>
 
   <p>¿No tienes cuenta?
-    <a routerLink="/register" style="color: blue "> Registrate</a>
+    <a routerLink="/register"> Registrate</a>
   </p>
 </ion-content>

@@ -1,135 +1,78 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #ffffff;
-    padding: 30px;
-    width: 450px;
-    border-radius: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-::placeholder {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-.form button {
-    align-self: flex-end;
-}
-
-.flex-column>label {
-    color: #151717;
-    font-weight: 600;
-}
-
-.inputForm {
-    border: 1.5px solid #ecedec;
-    border-radius: 10px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    transition: 0.2s ease-in-out;
-}
-
-.input {
-    margin-left: 10px;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    height: 100%;
-}
-
-.input:focus {
-    outline: none;
-}
-
-.inputForm:focus-within {
-    border: 1.5px solid #2d79f3;
-}
-
-.flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    justify-content: space-between;
-}
-
-.flex-row>div>label {
-    font-size: 14px;
-    
-    font-weight: 400;
-}
-
-.span {
-    font-size: 14px;
-    margin-left: 5px;
-    color: #2d79f3;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.button-submit {
-    margin: 20px 0 10px 0;
-  
-    border: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 10px;
-    height: 50px;
-    width: 100%;
-    cursor: pointer;
-}
-
-.p {
-    text-align: center;
-    color: black;
-    font-size: 14px;
-    margin: 5px 0;
-}
-
-.btn {
-    margin-top: 10px;
-    width: 100%;
-    height: 50px;
-    border-radius: 10px;
+ion-content {
+    --background: linear-gradient(to bottom right, #f3f4f6, #e5e7eb);
+    /* Fondo con degradado suave (gris claro) */
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 500;
-    gap: 10px;
-    border: 1px solid #ededef;
-    background-color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
-}
-
-.btn:hover {
-    border: 1px solid #2d79f3;
-    ;
-}
-
-.input {
-    margin-left: 10px;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
     height: 100%;
-    background-color: #f4f4f4;
+    /* Centrado vertical y horizontal */
+}
+
+form {
+    max-width: 360px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    /* Fondo blanco para contraste */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+    text-align: center;
+    /* Centrar contenido dentro del formulario */
+}
+
+form ion-item {
+    --inner-padding-start: 0;
+    margin-bottom: 18px;
+}
+
+form ion-input {
+    --placeholder-color: #888;
+    /* Color gris para el placeholder */
+    --background: #f9fafb;
     /* Fondo claro */
-    color: #333;
-    /* Color del texto */
+    --padding-start: 10px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+    /* Borde gris claro */
 }
 
-.input::placeholder {
-    color: #888;
-    /* Color del texto del placeholder */
+ion-button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #3b82f6, #2563eb);
+    /* Azul suave */
+    color: white;
+    border-radius: 8px;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
-.input:focus {
-    outline: none;
-    background-color: #e2e2e2;
-    /* Fondo claro al enfocarse */
+ion-button[type="submit"]:hover {
+    transform: scale(1.03);
+    /* Efecto de zoom */
+    background-color: #1d4ed8;
+    /* Azul más oscuro al pasar el mouse */
+}
+
+p {
+    font-size: 14px;
+    color: #4b5563;
+    /* Gris oscuro */
+    margin-top: 15px;
+}
+
+p a {
+    font-weight: bold;
+    color: #2563eb;
+    /* Azul suave */
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+    /* Subrayar al pasar el mouse */
 }
