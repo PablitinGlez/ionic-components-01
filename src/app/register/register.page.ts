@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-register',
@@ -16,41 +16,56 @@ export class RegisterPage implements OnInit {
   Contrasena: string = '';
   ConfirmacionContrasena: string = '';
 
-  constructor(private navController: NavController) {}
+  constructor(
+    private navController: NavController,
+    private alertController: AlertController
+  ) {}
 
   ngOnInit() {}
 
-  register() {
+  async presentAlert(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Error',
+      message: message,
+      buttons: ['OK'],
+    });
+
+    await alert.present();
+  }
+
+  async register() {
     // Verificar que todos los campos están completos
     if (
       !this.Nombre ||
       !this.Ciudad ||
       !this.Telefono ||
       !this.Correo ||
-     
+      
       !this.Contrasena ||
       !this.ConfirmacionContrasena
     ) {
-      console.log('Todos los campos son requeridos');
+      await this.presentAlert('Todos los campos son requeridos');
       return;
     }
 
     // Validar el formato del correo electrónico
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(this.Correo)) {
-      console.log('El correo electrónico no es válido');
+      await this.presentAlert('El correo electrónico no es válido');
       return;
     }
 
     // Validar el formato del número de teléfono
     if (this.Telefono.length < 10 || !/^\d+$/.test(this.Telefono)) {
-      console.log('El número de teléfono no es válido');
+      await this.presentAlert(
+        'El número de teléfono debe tener al menos 10 dígitos y solo contener números'
+      );
       return;
     }
 
     // Verificar que las contraseñas coincidan
     if (this.Contrasena !== this.ConfirmacionContrasena) {
-      console.log('Las contraseñas no coinciden');
+      await this.presentAlert('Las contraseñas no coinciden');
       return;
     }
 
