@@ -1,9 +1,3 @@
-<ion-header [translucent]="true">
-  <ion-toolbar color="primary">
-    <ion-title class="ion-text-center" style="color: white; font-weight: bold;">Registro</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
   <div class="registro" style="padding: 20px;">
     <h3 style="font-weight: 600; margin-bottom: 20px; text-align: center; color: #4a4a4a;">Crea tu Cuenta</h3>
@@ -11,6 +5,7 @@
     <!-- Nombre -->
     <ion-item style="margin-bottom: 15px; --border-color: #ccc; --border-radius: 10px;">
       <ion-input
+        [(ngModel)]="Nombre"
         placeholder="Nombre"
         style="padding-left: 15px; font-size: 16px; --background: #f9f9f9; border-radius: 10px;">
       </ion-input>
@@ -19,28 +14,56 @@
     <!-- Ciudad -->
     <ion-item style="margin-bottom: 15px; --border-color: #ccc; --border-radius: 10px;">
       <ion-input
+        [(ngModel)]="Ciudad"
         placeholder="Ciudad"
         style="padding-left: 15px; font-size: 16px; --background: #f9f9f9; border-radius: 10px;">
       </ion-input>
     </ion-item>
 
+    <!-- Número de Teléfono -->
+    <ion-item style="margin-bottom: 15px; --border-color: #ccc; --border-radius: 10px;">
+      <ion-input
+        [(ngModel)]="Telefono"
+        placeholder="Número de Teléfono"
+        type="tel"
+        style="padding-left: 15px; font-size: 16px; --background: #f9f9f9; border-radius: 10px;">
+      </ion-input>
+    </ion-item>
+
+    <!-- Correo Electrónico -->
+    <ion-item style="margin-bottom: 15px; --border-color: #ccc; --border-radius: 10px;">
+      <ion-input
+        [(ngModel)]="Correo"
+        placeholder="Correo Electrónico"
+        type="email"
+        style="padding-left: 15px; font-size: 16px; --background: #f9f9f9; border-radius: 10px;">
+      </ion-input>
+    </ion-item>
+
+   
     <!-- Contraseña -->
     <ion-item style="margin-bottom: 15px; --border-color: #ccc; --border-radius: 10px;">
       <ion-input
+        [(ngModel)]="Contrasena"
         placeholder="Contraseña"
         type="password"
         style="padding-left: 15px; font-size: 16px; --background: #f9f9f9; border-radius: 10px;">
       </ion-input>
     </ion-item>
 
-    <!-- Verificar Contraseña -->
-    <p style="padding-left: 5px; color: #ff2424; margin-bottom: 5px; font-size: 14px;">Verificar Contraseña</p>
-    <ion-item style="--border-color: #ccc; --border-radius: 10px;">
+    <!-- Confirmar Contraseña -->
+    <ion-item style="margin-bottom: 15px; --border-color: #ccc; --border-radius: 10px;">
       <ion-input
+        [(ngModel)]="ConfirmacionContrasena"
         placeholder="Confirma Contraseña"
         type="password"
         style="padding-left: 15px; font-size: 16px; --background: #f9f9f9; border-radius: 10px;">
       </ion-input>
     </ion-item>
+
+    <!-- Botón de registro -->
+    <ion-button expand="full" color="primary" (click)="register()">
+      Registrarse
+    </ion-button>
   </div>
 </ion-content>
