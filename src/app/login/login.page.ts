@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { NavController } from '@ionic/angular';
+import { AlertController, NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -9,47 +9,42 @@ import { NavController } from '@ionic/angular';
   standalone: false,
 })
 export class LoginPage implements OnInit {
-  //forma 1 inicialozacion directa = '',
-  //2da en el constructur acceder a this.password = ''
-  //3 decir al compilador que se encarga despues de la varaible un
-  //cuando kiero  enlazar a un evento un  ()
-  //y los corchetes
-
   email: string = '';
   password: string = '';
 
   constructor(
-    private navController: NavController
+    private navController: NavController,
+    private alertController: AlertController
   ) {}
 
   ngOnInit() {}
 
-  login(form: NgForm) {
-    
+  async presentAlert(header: string, message: string) {
+    const alert = await this.alertController.create({
+      header: header,
+      message: message,
+      buttons: ['OK'],
+    });
+    await alert.present();
+  }
 
-    //obtener los valores de formulario
-    console.log(form.value)
+  async login(form: NgForm) {
+    // Obtener los valores del formulario
+    console.log(form.value);
     console.log('valid', form.valid);
-    
 
-    //so form es invalido
-    //console.log(todos los campos son requeridos return
+    // Si el formulario es inválido
     if (!form.valid) {
-      console.log('Todos los campos son requeridos');
+      await this.presentAlert('Error', 'Todos los campos son requeridos');
       return;
     }
 
-
-
-    //si usaurio = admin y password = admin
-    //entonces con sole .log  login correcto
-    //si no console.log login incorrecto
+    // Validar credenciales
     if (this.email === 'admin' && this.password === 'admin') {
-      this.navController.navigateForward('/inicio')
+     
+      this.navController.navigateForward('/inicio'); // Navegar a la página de inicio
     } else {
-      console.log('login incorrecto');
+      await this.presentAlert('Error', 'Credenciales incorrectas');
     }
-
-    
   }
 }
