@@ -80,6 +80,10 @@ const routes: Routes = [
     loadChildren: () =>
       import('./register/register.module').then((m) => m.RegisterPageModule),
   },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+  },
   
 ];
 

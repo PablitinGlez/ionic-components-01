@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <!--aca ba el code-->
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="camera"> </ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"> </ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon
+          slot="icon-only"
+          ios="ellipsis-horizontal"
+          md="ellipsis-vertical"
+        ></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Chat Bot</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<!--ngFor-->
+<ion-content [fullscreen]="true">
+  <!--lista-->
+  <ion-list> 
+    <app-item-chat username="Juan Pablo" message="Welcome" dates="13:21" avatarURL="https://ionicframework.com/docs/img/demos/avatar.svg"></app-item-chat>
+  </ion-list>
+</ion-content>
